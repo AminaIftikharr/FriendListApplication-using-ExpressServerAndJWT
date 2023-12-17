@@ -38,11 +38,11 @@ app.use("/friends", function auth(req,res,next){
        token = req.session.authorization['accessToken'];
        jwt.verify(token, "access",(err,user)=>{
            if(!err){
-               req.user = user;
-               next();
-           }
-           else{
-               return res.status(403).json({message: "User not authenticated"})
+              req.user = user;
+              next();
+          }
+          else{
+              return res.status(403).json({message: "User not authenticated"})
            }
         });
     } else {
