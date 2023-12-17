@@ -1,8 +1,8 @@
 const express = require('express');
 
-const router = express.Router();
+const router=express.Router();
 
-let friends = {
+let friends={
     "johnsmith@gamil.com": {"firstName": "John","lastName": "Doe","DOB":"22-12-1990"},
     "annasmith@gamil.com":{"firstName": "Anna","lastName": "smith","DOB":"02-07-1983"},
     "peterjones@gamil.com":{"firstName": "Peter","lastName": "Jones","DOB":"21-03-1989"}
@@ -49,8 +49,6 @@ router.put("/:email", (req, res) => {
 }
   res.send('Error!!!')
 });
-
-
 
 router.delete("/:email", (req, res) => {
   
